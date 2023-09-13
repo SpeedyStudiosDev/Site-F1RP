@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../medias/icon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>F1 Rp | Accueil</title>
+</head>
+<body>
+    <nav class="fixed-nav-bar">
+        <div class="main">
+            <a href="../index.html" class="logo"><img src="../medias/logo.png" alt="Revenir à l'accueil" height="50px"></a>
+            <span id="menu_toggler" class="material-symbols-rounded">
+                menu
+            </span>
+        </div>
+        <div class="links">
+            <div class="collumn" id="left">
+                <h1><a href="../index.html" class="accueil">Accueil</a></h1>
+                <h1><a href="../index.html#news" class="actus">Actualités</a></h1>
+                <h1><a href="../index.html#calendar" class="calendrier">Calendrier</a></h1>
+            </div>
+            <hr>
+            <div class="collumn" id="right">
+                <h1><a href="../index.html#standings" class="standings">Classements</a></h1>
+                <h1><a href="https://www.youtube.com/channel/UCAMk2VP9Bz4X3A3ngKqG69Q" target="_blank">F1 RP TV</a></h1>
+                <h1><a href="../about.html" class="about">À Propos</a></h1>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="article-title">
+            <h1 class="title">Christophe Jones pénalisé</h1>
+        </div>
+        <div class="article-container">
+            <div class="new">
+                <div class="left">
+                    <img src="../medias/News/BREAKING/pena 154 points cj.png" alt="">
+                </div>
+                <div class="right">
+                    <h3 class="info">
+                        Le pilote de l'écurie américaine Haas F1 Team Christophe Jones s'est vu être pénalisé suite a un incident au Grand Prix d'Imola, mais que s'est-il passé pour le pilote francais?
+                        <br>
+                        <br>
+                        Pour savoir, il faut remonter un peu en arriere, pendant le Grand Prix d'Imola qui s'est déroullé le 4 juin 2023, pendant lequel la pluie est tombée, interdisant k'utilisation du DRS, sauf qu'un défaut sur la monoplace du français a fait que cet appendice est restée ouverte pendant près de trois tours, ce qui a eu de lourdes conséquences...
+                        <br>
+                        <br>
+                        En effet, la nouvelle est tombée pendant la pause estivale: Christophe Jones se voit pénalisé de 15 points au Championnat Pilote, de plus, il sera disqualifié  de la course, ce qui à pour conséquence de le faire chuter à la troisième position du classement pilote, à l'aube du Grand Prix des Pays-Bas, à Zandvoort.
+                    </h3>
+                </div>
+            </div>
+            <br>
+            <footer>
+                <h3>© 2023 F1 RP • Tous droits réservés.</h3>
+                <p>Site web réalisé par Speedy Studios pour Citax.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+<script>
+    // Sélection de la div et du bouton
+    const standingsDiv = document.getElementById('standings');
+    const standingsButton = standingsDiv.querySelector('.standings-selector');
+
+    // Ajout de l'écouteur d'événements au bouton
+    standingsButton.addEventListener('click', () => {
+      // Toggle de la classe 'team' sur la div '#standings'
+      standingsDiv.classList.toggle('team-standing');
+
+      // Suppression ou ajout de la classe 'driver-standings' en fonction de la classe 'team'
+      if (standingsDiv.classList.contains('team-standing')) {
+        standingsDiv.classList.remove('driver-standing');
+      } else {
+        standingsDiv.classList.add('driver-standing');
+      }
+    });
+
+</script>
+    <script>
+        const menuOpener = document.getElementById('menu_toggler');
+
+        // Sélectionner l'élément <nav>
+        const navElement = document.querySelector('body');
+
+        // Ajouter un gestionnaire d'événement au clic sur le #menuopener
+        menuOpener.addEventListener('click', function () {
+          // Ajouter la classe "opened" à l'élément <nav>
+          navElement.classList.toggle('opened');
+        });</script>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../medias/icon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>F1 Rp | Accueil</title>
+</head>
+<body>
+    <nav class="fixed-nav-bar">
+        <div class="main">
+            <a href="../index.html" class="logo"><img src="../medias/logo.png" alt="Revenir à l'accueil" height="50px"></a>
+            <span id="menu_toggler" class="material-symbols-rounded">
+                menu
+            </span>
+        </div>
+        <div class="links">
+            <div class="collumn" id="left">
+                <h1><a href="../index.html" class="accueil">Accueil</a></h1>
+                <h1><a href="../index.html#news" class="actus">Actualités</a></h1>
+                <h1><a href="../index.html#calendar" class="calendrier">Calendrier</a></h1>
+            </div>
+            <hr>
+            <div class="collumn" id="right">
+                <h1><a href="../index.html#standings" class="standings">Classements</a></h1>
+                <h1><a href="https://www.youtube.com/channel/UCAMk2VP9Bz4X3A3ngKqG69Q" target="_blank">F1 RP TV</a></h1>
+                <h1><a href="../about.html" class="about">À Propos</a></h1>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="article-title">
+            <h1 class="title">ÉCURIES ÉMERGENTES?</h1>
+        </div>
+        <div class="article-container">
+            <div class="new">
+                <div class="left">
+                    <img src="../medias/News/w14.jpg" width="100%" alt="">
+                </div>
+                <div class="right">
+                    <h3 class="info">
+                        <div class="contexte">Ce week-end se déroulait les essais hivernaux à Bahrein dans le désert de Sakhir, les équipes ont pu dévoiler la livrée qui accompagnera le design de leur monoplace et notamment commencer à tester leur voiture conçue durant l'hiver.
+                        </div>
+                        <br>
+                        Tout d'abord évoquons le cas Mercedes, qui pendant les essais hivernaux à proposé de très bons résultats avec une 1ère place l'après-midi midi pour George Russell, et le soir une seconde place de la part Lewis Hamilton. Ce sont des résultats prometteurs pour les gris qui on le rappelle avaient stoppés le développement de la W14 pour tout concentrer sur la W15 en milieu de saison. Ce sacrifice ne sera peut être pas vain, la réponse le week-end prochain lors du grand prix de Bahreïn.
+                        <br>
+                        <br>
+                        Ensuite parlons de l'écurie des verts, Aston Martin. Le cas est très similaire à l'écurie Mercedes avec une 4ème place pour Alonso et une 7ème pour Stroll aux essais et ils ont stoppé de la même manière que Mercedes leur développement au cours de la saison 2023. Et tout comme leur producteur moteur leur sacrifice ne sera peut être pas insignifiant. Pourtant avec une malheureuse 8ème place au constructeur, battue par Alfa Roméo (Sauber) au grand prix d'Abu Dhabi 2023, les dépenses n'ont pu être aussi élevées qu'espérées.  Mais on sent une évolution du côté de l'écurie des verts qui pourra peut être porter ses fruits en cette saison 2024.
+                        <br>
+                        <br>
+                        Et enfin pour finir parlons de l'écurie Sauber (ex Alfa Roméo). Comme mentionné ci dessus, l'écurie a dépassé Aston Martin au dernier grand prix de la saison leur prenant la 7ème place au championnat constructeur. Ce résultat met le groupe Sauber dans une bonne dynamique avec une envie de continuer sur cette lancée, mais aussi grâce au départ du sponsor titre Alfa Roméo qui rend une certaine indépendance au groupe Suisse. Pour le moment les résultats des essais ne sont pas excitants mais c'est une écurie qui peut nous surprendre durant cette saison.
+                        <br>
+                        <br>
+                        Ces 3 écuries à différentes échelles montrent un signe de puissance qui peut leur permettre de sortir parmi les meilleures et de pourquoi pas un jour prétendre au titre de champion du monde.
+                        <br>
+                        <br>
+                        Rendez vous dimanche 17 Septembre pour le grand prix de Bahreïn. 
+                    </h3>
+                </div>
+            </div>
+            <br>
+            <footer>
+                <h3>© 2023 F1 RP • Tous droits réservés.</h3>
+                <p>Site web réalisé par Speedy Studios pour Citax.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+<script>
+    // Sélection de la div et du bouton
+    const standingsDiv = document.getElementById('standings');
+    const standingsButton = standingsDiv.querySelector('.standings-selector');
+
+    // Ajout de l'écouteur d'événements au bouton
+    standingsButton.addEventListener('click', () => {
+      // Toggle de la classe 'team' sur la div '#standings'
+      standingsDiv.classList.toggle('team-standing');
+
+      // Suppression ou ajout de la classe 'driver-standings' en fonction de la classe 'team'
+      if (standingsDiv.classList.contains('team-standing')) {
+        standingsDiv.classList.remove('driver-standing');
+      } else {
+        standingsDiv.classList.add('driver-standing');
+      }
+    });
+
+</script>
+    <script>
+        const menuOpener = document.getElementById('menu_toggler');
+
+        // Sélectionner l'élément <nav>
+        const navElement = document.querySelector('body');
+
+        // Ajouter un gestionnaire d'événement au clic sur le #menuopener
+        menuOpener.addEventListener('click', function () {
+          // Ajouter la classe "opened" à l'élément <nav>
+          navElement.classList.toggle('opened');
+        });</script>
+</html>
